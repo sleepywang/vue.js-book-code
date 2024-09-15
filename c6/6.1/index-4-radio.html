@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue 示例</title>
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+		<div id="app" >
+			<input type= "radio" v-model="picked" value="html" id="html" >
+			<label for="html" >HTML</label>
+			<br>
+			<input type ="radio" v-model = "picked" value = "js" id= "js" >
+			<label for="js" >JavaScript</label>
+			<br>
+			<input type="radio" v-model="picked" value = "css" id= "css" >
+			<label for= "css" >CSS</label>
+			<br>
+			<p>选择的项是: {{ picked }}</p>
+		</div>
+		<script>
+			var app =new Vue ({
+				el :'#app',
+				data : {
+					picked : 'js'
+				}
+			})
+		</script>
+	</body>
+</html>
