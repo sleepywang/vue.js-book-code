@@ -14,7 +14,11 @@
 		<script>
 			Vue.component ('my-component', {
 				props: [ 'message' ],
-				template :'<div>{{ message.length }}</div> '
+				template :'<div>\
+					<p>{{ message }}</p>\
+					<p>{{ message.length }}</p>\
+					<li v-for="item in message">{{item}}</li>\
+					</div>'
 			});
 			
 			var app =new Vue ( {
